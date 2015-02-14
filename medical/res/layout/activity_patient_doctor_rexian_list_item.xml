@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_doctor_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mine_avatar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_doctor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="刘娟"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_doctor_keshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/tv_doctor_name"
+                android:text="妇科"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="40dp"
+                android:text="元"
+                android:textColor="@color/title_background"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/textView3"
+                android:text="10"
+                android:textColor="@color/title_background"
+                android:textSize="@dimen/font_16" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京协和医院"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_doctor_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="副主任医师"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_yuyue_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014-01-11"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_14" />
+            <TextView
+                android:id="@+id/tv_yuyue_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:00"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_14" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_14" />
+            <TextView
+                android:id="@+id/tv_yuyue_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:00"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_yuyue_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="等待支付"
+                android:textColor="@color/title_background"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/title_background"
+                android:textSize="@dimen/font_14"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:background="@drawable/shape005_title_background"
+                android:text="支付" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add_yuyue_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2014-01-01"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+</LinearLayout>

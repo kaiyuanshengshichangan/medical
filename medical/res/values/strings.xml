@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">天使之光</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="descr_image">Image</string>
+
+    <string name="mid">mid</string>
+    <string name="convert_view">convertView</string>
+    
+    <string name="did">did</string>
+    <string name="price">price</string>
+    <string name="guahao">guahao</string>
+    <string name="zhuyuan">zhuyuan</string>
+    <string name="rexian">rexian</string>
+    <string name="sirenyisheng">sirenyisheng</string>
+</resources>

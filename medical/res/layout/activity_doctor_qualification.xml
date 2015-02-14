@@ -1,0 +1,374 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/title_background" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="医生资格认证"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimens_10_160" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="姓名："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/username"
+                android:background="@color/color_white"
+                android:hint="请输入真实姓名"
+                android:inputType="text"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/tv_rexiandingjia"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="身份证号："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_rexiandingjia"
+                android:background="#00000000"
+                android:hint="请输入真实的身份证号"
+                android:inputType="number"
+                android:maxLength="18"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/tv_zixun_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="所属医院："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_zixun_date"
+                android:background="#00000000"
+                android:hint="请输入您所在的医院"
+                android:inputType="text"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/tv_keshi"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="科室："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_keshi"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_keshi"
+                android:background="#00000000"
+                android:hint="请输入您所在的科室"
+                android:inputType="text"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="主治："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_indications"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:background="#00000000"
+                android:hint=""
+                android:inputType="text"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="行医证："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <ImageView
+                android:id="@+id/iv_medical_renzheng"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/iv_medical_renzheng" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <TextView
+            style="@style/layout_vertical"
+            android:layout_weight="0.06"
+            android:layout_marginLeft="12dp"
+            android:text="个人账户信息"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_18" />
+
+        <TextView
+            style="@style/layout_vertical"
+            android:layout_weight="0.04"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:text="(此信息用于本平台打款使用，请谨慎填写，不可更改)"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/font_12" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/tv_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="开户行："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_bank"
+                android:background="#00000000"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="账号："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_account"
+                android:background="#00000000"
+                android:hint=""
+                android:inputType="number"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+
+        <RelativeLayout
+            style="@style/layout_vertical"
+            android:layout_weight="0.1" >
+
+            <TextView
+                android:id="@+id/tv_account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="户名："
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+
+            <EditText
+                android:id="@+id/et_account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/tv_account_name"
+                android:background="#00000000"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:textSize="@dimen/midtext" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#CDCDCD" />
+        <View
+            style="@style/layout_vertical"
+            android:layout_weight="0.02"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/layout_vertical"
+            android:layout_weight="0.1"
+            android:background="@drawable/btn_register_submit" />
+        <View
+            style="@style/layout_vertical"
+            android:layout_weight="0.02"/>
+    </LinearLayout>
+
+</LinearLayout>

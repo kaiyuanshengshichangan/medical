@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+
+<dimen name="dimens_1_160">5px</dimen><dimen name="dimens_2_160">10px</dimen>
+<dimen name="dimens_3_160">15px</dimen><dimen name="dimens_4_160">20px</dimen>
+<dimen name="dimens_5_160">25px</dimen><dimen name="dimens_6_160">30px</dimen>
+<dimen name="dimens_7_160">35px</dimen><dimen name="dimens_8_160">40px</dimen>
+<dimen name="dimens_9_160">45px</dimen><dimen name="dimens_10_160">50px</dimen>
+<dimen name="dimens_11_160">55px</dimen><dimen name="dimens_12_160">60px</dimen>
+<dimen name="dimens_13_160">65px</dimen><dimen name="dimens_14_160">70px</dimen>
+<dimen name="dimens_15_160">75px</dimen><dimen name="dimens_16_160">80px</dimen>
+<dimen name="dimens_17_160">85px</dimen><dimen name="dimens_18_160">90px</dimen>
+<dimen name="dimens_19_160">95px</dimen><dimen name="dimens_20_160">100px</dimen>
+
+</resources>

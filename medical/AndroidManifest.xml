@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.henglianmobile.medical"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <supports-screens 
+        android:largeScreens="true"
+		android:normalScreens="true" 
+		android:anyDensity="true"
+		android:smallScreens="true"
+		android:xlargeScreens="true"
+		 />
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.henglianmobile.medical.app.TApplication" >
+        <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
+        <activity
+            android:name="com.henglianmobile.medical.activity.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 引导页 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.GuidanceViewActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 登陆 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.LoginActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 注册 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.RegisterActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 用户协议-->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.UserAgreementActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 医生资格认证 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.DoctorQualificationActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 忘记密码 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.ForgetPwdActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 修改密码 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.ChangePasswordActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 修改手机号 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.UpdateMobileActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 主界面 -->
+        <activity 
+            android:name="com.henglianmobile.medical.activity.MainActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 显示大图 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.ShowBitPicActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        
+        <!-- =============================================================================== -->
+        <!-- 我是患者 -->
+        <!-- 医生热线 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.DoctorPhoneActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 健康管理 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.HealthManageActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 我的账户 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.MyAccountActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 账号管理 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.ZhangHaoGuanLiActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 我的医生 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.MyDoctorActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 我的医生详情 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.DoctorDetailActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 私人医生 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.MyPersonalDoctorActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 药品导购 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.YaoPinDaoGouActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 发布药方 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.UploadYaoFangActivity" 
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 药品详情 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.YaoPinDetailActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 预约就诊 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.YuYueJiuZhenActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 预约住院 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.YuYueZhuYuanActivity" 
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 账户充值 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.patient.ZhangHuChongZhiActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 查找医生 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.SearchDoctorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 挂号 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.GuahaoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" > 
+        </activity>
+        <!-- 私人医生 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.PersonalDoctorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" > 
+        </activity>
+        <!-- 住院 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.ZhuyuanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" > 
+        </activity>
+        <!-- 热线 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.RexianActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" > 
+        </activity>
+        <!-- 选择支付方式 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.PayTypeSelectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" > 
+        </activity>
+        <!-- 基本情况 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.BaseInformationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 发布基本情况 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.PublishBaseInformationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 化验单 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.HuaYanDanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 发布化验单 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.PublishHuaYanDanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 用药历史 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.YongYaoLiShiActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 发布用药历史 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.PublishYongYaoLiShiActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 体检报告 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.TiJianBaoGaoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 发布体检报告 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.PublishTiJianBaoGaoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 健康管理方案 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.HealthManageMethodActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 健康管理方案详情 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.HealthManageMethodDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 账户充值汇款信息 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.RemittanceInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 我是患者 -->
+        <!-- ================================================================================== -->
+        <!-- ================================================================================== -->
+        <!-- 我是医生 -->
+        <!-- 定价 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.DingjiaActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 我的患者 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.MyPatientActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 我的患者详情 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.PatientDetailActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 私人医生（我的专属患者） -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.MyPersonalPatientActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 私人医生（我的专属患者） -患者健康管理-->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.PatientHealthManageActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 私人医生（我的专属患者） -发布对患者的健康管理方案-->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.PublishHealthManageMethodActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 私人医生（我的专属患者） -患者健康管理-患者基本情况-->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.PatientBaseInfoLiActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 我的热线 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.MyPhoneActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 预约挂号 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.YuYueJiuZhenActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 预约住院 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.YuYueZhuYuanActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 医生基本信息 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.DoctorBaseInfoActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 账号管理 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.ZhangHaoGuanLiActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 报酬统计 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.doctor.BaoChouTongJiActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <!-- 我是医生 -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- 我是业务员 -->
+        <!-- 提成 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.CommissionActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 挂号数量 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.GuaHaoCountActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 我的医生 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.MyDoctorActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 私人医生 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.PersonalDoctorActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 热线数量 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.PhoneCountActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 住院数量 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.ZhuYuanCountActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 账号管理 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.saleman.ZhangHaoGuanLiActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 我是业务员 -->
+        <!-- 患友图片 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.HuanyouPagerActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 患友图片1 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.HuanyouPagerActivity1" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 患友详情 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.HuanyouquanDetailActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 医友圈 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.YiYouQuanActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 发布病情 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.PublishPatientStatusActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 选择照片 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.SelectPhotosActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 医疗资讯title -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.MedicalZiXunTitleActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 医疗资讯详情 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.MedicalZiXunDetailActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 医疗资讯详情修改 -->
+        <activity 
+            android:name="com.henglianmobile.medical.ui.activity.MedicalZiXunDetailActivity1" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!-- 手机图片文件夹列表 -->
+        <activity
+            android:name="com.henglianmobile.medical.logic.ImgFileListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 手机图片列表 -->
+        <activity
+            android:name="com.henglianmobile.medical.logic.ImgsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.UpdatePasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        <!-- 显示图片 -->
+        <activity
+            android:name="com.henglianmobile.medical.ui.activity.patient.ShowPictureActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" > 
+        </activity>
+        
+        <service android:name="com.henglianmobile.medical.service.UpdateApkService"></service>
+    </application>
+
+</manifest>

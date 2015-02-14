@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_patient_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mine_avatar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_patient_name"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_have_number"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape005"
+                    android:gravity="center"
+                    android:text="有号"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tv_have_no_number"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape005"
+                    android:gravity="center"
+                    android:text="无号"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="徐老严"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_16" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_patient_add_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014-01-01"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_12" />
+
+            <TextView
+                android:id="@+id/tv_yuyue_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="09:00"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="--"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_12" />
+
+            <TextView
+                android:id="@+id/tv_yuyue_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="09:00"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="肚子不舒服"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+</LinearLayout>
